@@ -33,6 +33,43 @@ make a clean VM shortly to see which ones I actually need.
 
 ### ct-ng fixes
 
-TODO write me
+I ran the following commands to get ct-ng working:
+
+```bash
+# assuming you already installed all apt packages
+
+git clone https://github.com/crosstool-ng/crosstool-ng
+cd crosstool-ng/
+git checkout crosstool-ng-1.25.0
+./bootstrap && ./configure --enable-local && make -j$(nproc)
+./configure --enable-local && make -j$(nproc)
+./ct-ng arm-nano-eabi
+# ./ct-ng menuconfig to change any settings
+# Add GDB support via menuconfig
+./ct-ng upgradeconfig # something was goofy with the GDB config and this fixed it
+```
+
+After those, I needed to update the config to allow it to download an older version of ZLIB. The following patch shows
+my changes:
+
+```
+--- .config.backup	2022-11-29 23:10:55.987363105 -0600
++++ .config	2022-11-29 23:11:03.331460322 -0600
+@@ -681,7 +681,7 @@
+ CT_ZLIB_PATCH_ORDER="global"
+ CT_ZLIB_V_1_2_12=y
+ CT_ZLIB_VERSION="1.2.12"
+-CT_ZLIB_MIRRORS="http://downloads.sourceforge.net/project/libpng/zlib/${CT_ZLIB_VERSION} https://www.zlib.net/"
++CT_ZLIB_MIRRORS="http://downloads.sourceforge.net/project/libpng/zlib/${CT_ZLIB_VERSION} https://www.zlib.net/ https://www.zlib.net/fossils"
+ CT_ZLIB_ARCHIVE_FILENAME="@{pkg_name}-@{version}"
+ CT_ZLIB_ARCHIVE_DIRNAME="@{pkg_name}-@{version}"
+ CT_ZLIB_ARCHIVE_FORMATS=".tar.xz .tar.gz"
+```
+
+Finally:
+
+```
+./ct-ng build
+```
 
 ## Building 1bitsy examples

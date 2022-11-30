@@ -20,11 +20,16 @@ complete a few unepxected steps in configuring it, but I was finally able to get
 
 ### Install apt-packages
 
-I needed the following apt packages:
+I installed the following apt packages:
 
 ```bash
-sudo apt install TODO
+sudo apt install build-essential git ia32-libs wget python3 autoconf gperf \
+    bison flex texinfo help2man awk gawk libtool libtool-bin \
+    python3-distutils 
 ```
+
+Some of these are likely left-overs from my attempts to get the pre-built binaries from arm working, so I'm going to
+make a clean VM shortly to see which ones I actually need.
 
 ### ct-ng fixes
 

@@ -25,8 +25,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "crosstool-ng.md",
-                "mode": "preview",
+                "file": "Intro.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -82,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "07862fc478bdd927",
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "crosstool-ng.md",
+                "file": "Intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "crosstool-ng.md",
+                "file": "Intro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "crosstool-ng.md"
+                "file": "Intro.md"
               }
             }
           }
@@ -162,8 +161,9 @@
   },
   "active": "985b7c2539a916c7",
   "lastOpenFiles": [
-    "Intro.md",
     "crosstool-ng.md",
+    "Intro.md",
+    "1bitsy Examples.md",
     "[.md",
     "create a link.md"
   ]

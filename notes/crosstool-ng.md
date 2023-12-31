@@ -4,7 +4,7 @@
 1. Install app packages:
 	```bash
 	sudo apt install build-essential gperf flex bison texinfo help2man gawk \
-		libtool-bin libncurses-dev
+		libtool-bin libncurses-dev python3-pip python-is-python3
 	```
 1. Download crosstool-ng 1.26.0:
 	```bash
@@ -18,6 +18,4 @@
 	make
 	sudo make install
 	```
-
-## Creating the toolchain
 

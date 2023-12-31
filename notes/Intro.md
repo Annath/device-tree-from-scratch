@@ -1,7 +1,11 @@
 ## Environment
 
-I'm attempting to set this up on Debian 12, using a toolchain compiled with [[crosstool-ng]].
+I'm attempting to set this up on Ubuntu 22.04, using a toolchain installed from apt (`gcc-arm-none-eabi` and `gdb-multiarch`).
 
-## Setup Steps
+```bash
+sudo apt install gcc-arm-none-eabi gdb-multiarch
+```
 
-See [[crosstool-ng]] for crosstool-ng setup.
+# 1bitsy Examples
+
+Clone the 1bitsy examples from [my fork](https://github.com/Annath/1bitsy-examples).
